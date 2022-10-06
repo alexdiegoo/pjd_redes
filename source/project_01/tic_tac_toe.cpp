@@ -2,6 +2,7 @@
 Autor: Luiz Paulo de Souza Medeiros
 Disciplina: Programação de Jogos em Rede
 Aula 01 - Programa 01 - Implementando o Jogo da Velha
+Alunos: Alex Diego ( the best of programation ) e Júlia Thaynara vulgo mendes 
 *******************************************************************************/
 
 #include <iostream> // biblioteca padrão de entrada e saída
@@ -35,6 +36,7 @@ int main(){
 
     // Identificação dos Jogadores
     string jogador_1, jogador_2;
+    string vencedor;
 
     cout << "Insira o nome para o Jogador 1 (O): ";
     cin >> jogador_1;
@@ -69,14 +71,97 @@ int main(){
         
         tabuleiro[posicao_jogada -1] = jogador_ativo;
         
-        if (jogador_ativo == 'O')
-            jogador_ativo = 'X';
-        else
-            jogador_ativo = 'O';
 
         // Identificar condição de parada;
         jogo_continua = true; // Deverá receber false se o jogo encerrar;
+        
+        if(tabuleiro[0] == jogador_ativo && tabuleiro[1] == jogador_ativo && tabuleiro[2] == jogador_ativo) {
+        	jogo_continua = false;
+        	
+        	if(jogador_ativo == 'O') vencedor = jogador_1;
+        	else vencedor = jogador_2;
+        	
+        	cout << "====--- FIM DE JOGO ---====" << endl 
+        	<< "Vitória do jogador: " << vencedor << endl;
+        }
+        
+        if(tabuleiro[3] == jogador_ativo && tabuleiro[4] == jogador_ativo && tabuleiro[5] == jogador_ativo) {
+        	jogo_continua = false;
+        	
+        	if(jogador_ativo == 'O') vencedor = jogador_1;
+        	else vencedor = jogador_2;
+        	
+        	cout << "====--- FIM DE JOGO ---====" << endl 
+        	<< "Vitória do jogador: " << vencedor << endl;
+        }
+        
+        if(tabuleiro[6] == jogador_ativo && tabuleiro[7] == jogador_ativo && tabuleiro[8] == jogador_ativo) {
+        	jogo_continua = false;
+        	
+        	if(jogador_ativo == 'O') vencedor = jogador_1;
+        	else vencedor = jogador_2;
+        	
+        	cout << "====--- FIM DE JOGO ---====" << endl 
+        	<< "Vitória do jogador: " << vencedor << endl;
+        }
+        
+        if(tabuleiro[0] == jogador_ativo && tabuleiro[3] == jogador_ativo && tabuleiro[6] == jogador_ativo) {
+        	jogo_continua = false;
+        	
+        	if(jogador_ativo == 'O') vencedor = jogador_1;
+        	else vencedor = jogador_2;
+        	
+        	cout << "====--- FIM DE JOGO ---====" << endl 
+        	<< "Vitória do jogador: " << vencedor << endl;
+        }
+        
+        if(tabuleiro[1] == jogador_ativo && tabuleiro[4] == jogador_ativo && tabuleiro[7] == jogador_ativo) {
+        	jogo_continua = false;
+        	
+        	if(jogador_ativo == 'O') vencedor = jogador_1;
+        	else vencedor = jogador_2;
+        	
+        	cout << "====--- FIM DE JOGO ---====" << endl 
+        	<< "Vitória do jogador: " << vencedor << endl;
+        }
+        
+        if(tabuleiro[2] == jogador_ativo && tabuleiro[5] == jogador_ativo && tabuleiro[8] == jogador_ativo) {
+        	jogo_continua = false;
+        	
+        	if(jogador_ativo == 'O') vencedor = jogador_1;
+        	else vencedor = jogador_2;
+        	
+        	cout << "====--- FIM DE JOGO ---====" << endl 
+        	<< "Vitória do jogador: " << vencedor << endl;
+        }
+        
+        if(tabuleiro[0] == jogador_ativo && tabuleiro[4] == jogador_ativo && tabuleiro[8] == jogador_ativo) {
+        	jogo_continua = false;
+        	
+        	if(jogador_ativo == 'O') vencedor = jogador_1;
+        	else vencedor = jogador_2;
+        	
+        	cout << "====--- FIM DE JOGO ---====" << endl 
+        	<< "Vitória do jogador: " << vencedor << endl;
+        }
+        
+        if(tabuleiro[2] == jogador_ativo && tabuleiro[4] == jogador_ativo && tabuleiro[6] == jogador_ativo) {
+        	jogo_continua = false;
+        	
+        	if(jogador_ativo == 'O') vencedor = jogador_1;
+        	else vencedor = jogador_2;
+        	
+        	cout << "====--- FIM DE JOGO ---====" << endl 
+        	<< "Vitória do jogador: " << vencedor << endl;
+        }
+        
+       if (jogador_ativo == 'O')
+          jogador_ativo = 'X';
+       else
+          jogador_ativo = 'O';
     }
+    
+    
     
     /* FIM DO JOGO
      - Exibir o resultado.
